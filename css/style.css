@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: 'Alegreya Sans', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    /* font-size: 62.5%; */
+    /* 1rem=10px */
+    overflow-x: hidden; /*To manage overflow */
+}
+
+body {
+    overflow-x: hidden; /*To manage overflow */
+}
+
+/****************************************************************************/
+                 /* Navbar  Styling */
+/****************************************************************************/
+.navbar {
+    padding: 0 1rem;
+}
+.header .navbar_one {
+    display: flex;
+    padding: 0 5rem;
+    height: 6rem;
+    justify-content: space-between;
+    align-items: center;
+    background: #3d5f00;
+}
+.header .navbar_two .navbar_list {
+    display: flex;
+    padding:0 15rem 0 15rem;
+    height: 5rem;
+    justify-content: center;
+    gap: 3.5rem;
+    list-style: none;
+    align-items: center;
+    margin-bottom: 0 !important;
+}
+.logo_img{
+
+}
+
+/* .header .navbar_two { */
+    /* display: flex; */
+    /* padding: 0 4.8rem; */
+    /* height: 10rem; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+/* } */
+/* .navbar_list { */
+    /* display: flex; */
+    /* gap: 4.8rem;  */
+    /* list-style: none;  */
+/* } */
+
+.login_info{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    color: #ffff; 
+    
+}
+.login_info h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* *********** Styling for Wish list & Cart Section ***************  */
+.header .order_list{
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.header .order_list span{
+    background-color: #608b14;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -15px;
+    left: 65%;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.7rem;
+}
+.navbar_one .form-control{
+    background-color: transparent;
+    border: none;
+}
+.search_info_bar{
+    border-bottom: 0.1rem solid #fff;
+    display: flex;
+    align-items: center;
+}
+
+/* For Placeholder Styling */
+
+.search_info_bar input::placeholder {
+    font-size: 1rem;
+    /* font-weight: bold; */
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.5;
+    color:#fff;
+  }
+  
+.search_list{
+    background-color: transparent;
+    color: #ffff;
+    font-size: 1.5rem;
+}
+
+/* Navbar Styling */
+
+.navbar_link:link,          /* Use  Pseudo-classes here i.e. :link , :visited , :hover , :active etc. */
+.navbar_link:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: #3d5f00;
+    transition:all 0.3s;
+}
+.navbar_link:hover,
+.navbar_link:active{
+    color: #364fc7;
+}
+
+/* ******************* Styling for Responsive Navbar***************** */
+
+.mobile_navbar_btn{
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav_icon{
+    width:4rem;
+    height:4rem;
+    color: #3d5f00;
+    border: 2.5px solid;
+    margin: 1rem;
+}
+
+.nav_icon[name="close-outline"] {
+    display: none;
+}
+
+
+/****************************************************************************/
+                 /* Home Section Styling*/
+/****************************************************************************/
+
+.main_div{
+    width: 100%;
+}
+.home_sec {
+    /* background-image: url('images/Home.png'); */
+    width: 100%;
+    height: auto;
+    background-size: cover !important; /*Write this If background image did'nt show*/ 
+    background-repeat: no-repeat;
+}
+.detailsec1{
+    position: relative;
+    padding: 15rem 0 15rem 0rem;
+    color: #3d5f00;
+}
+.border_shape1 {
+    width: 20rem;
+    position: absolute;
+    left: 0rem;
+    top: 23.5rem;
+    border-top: 0.25rem solid #3d5f00;
+}
+.detailsec1 h1 {
+    font-size: 3.5rem;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0rem !important;
+}
+.detailsec1 h2 {
+    font-size: 3rem;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 100;
+    margin-bottom: 2rem;
+}
+.detailsec1 p {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    line-height: 1.7rem;
+}
+
+/******** Common Button Section ***********/
+/* Base styles for the button */
+
+.buttonsec button{
+    background-color: #3d5f00;
+    color: #fff;
+    font-family:'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border: 2.5px solid #3d5f00;
+    border-radius: 1.5rem 0rem;
+    padding: 0.7rem 2rem;
+    text-align: center;
+    /* cursor: pointer; */
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+/* Style for the button 1 when hovering */
+.buttonsec:hover {
+    background-color: #00bec9;
+    border-color: #00bec9;
+  }
+
+/* Style for the button 1 when active/pressed */
+.buttonsec:active {
+  background-color: #00bec9;
+  border-color: #00bec9;
+}  
+.arrow_btn {
+    color: #fff;
+    font-size: 1.5rem;
+}
+/****************************************************************************/
+                 /* About Us Section Styling*/
+/****************************************************************************/
+    
+    /******** Common Main Section & Heading ***********/
+
+.main_section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.main_section h1{
+    font-size: 5rem;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    color: #dbd3d3;
+}
+    /******** Common Main Section & Heading End ***********/
+
+.about_sec {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 5rem;
+    margin-top: 10rem;
+}
+
+.about_sec .heading_sec{
+    position: absolute;
+    font-size: 2.8rem;
+    font-weight:800;
+    color: #3d5f00;
+    font-family: 'Roboto', sans-serif;
+    top: 9.7rem;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    /* text-transform: capitalize; */
+}
+
+ /*This is a common paragraph section*/
+
+.paragraph_sec {
+    position: absolute;
+    font-size: 1.7em;
+    text-align: center;
+    color: #3d5f00;
+    font-family: 'Roboto', sans-serif;
+    top: 16rem;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    /* padding: 0 24rem 0 26rem; */
+}
+
+/******** About Us Details Section ***********/
+
+.details_sec1 {
+    padding-right: 5rem;
+}
+.details_sec1 h1{
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    color:#3d5f00;
+    line-height: 1;
+    text-align: left;
+    font-weight: 600;
+}
+.details_sec1 p{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    color:#3d5f00;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: left;
+    margin: 2rem 0 2rem 0;
+}
+.details_sec2 {
+    padding-left: 5rem;
+}
+.details_sec2 h1{
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    color:#3d5f00;
+    line-height: 1;
+    text-align: left;
+    font-weight: 600;
+}
+.details_sec2 p{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    color:#3d5f00;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: left;
+    margin: 2rem 0 2rem 0rem;
+}
+
+
+/******** Common Details Section ***********/
+
+.details_sec h1{
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    color:#3d5f00;
+    line-height: 1;
+    text-align: left;
+    font-weight: 600;
+}
+.details_sec p{
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    color:#3d5f00;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+/******** Common Details Section End ***********/
+
+    /* This overlay of Image */
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(149 165 2 / 66%); /* You can adjust the gradient colors and direction as needed */
+} 
+
+    /* Styling for Border lines on image  */
+
+.main_img {
+    position: relative;
+}
+.border_shape {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    border-left: 0.4rem solid #3d5f00;
+    border-top: 0.4rem solid #3d5f00;
+}
+
+/****************************************************************************/
+                 /* Service Section Styling*/
+/****************************************************************************/
+.service_us_sec {
+    display: grid;
+    grid-template-rows: 1fr 1fr; 
+    gap: 2rem;
+    margin-top: 10rem;
+}
+.service_us_sec .heading_sec{
+    position: absolute;
+    font-size: 2.8rem;
+    font-weight:800;
+    color: #3d5f00;
+    font-family: 'Roboto', sans-serif;
+    top: 9.7rem;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    text-transform: capitalize;
+}
+.service_us_sec .details_sec h1{
+    margin-bottom: 2rem;
+}
+
+/****************************************************************************/
+                    /* Special Discount Section-1 Styling */ 
+/****************************************************************************/
+
+.discount_sec1 {
+    width: 100%;
+    height: auto;
+    background-size: cover !important; /*Write this If background image did'nt show*/ 
+    background-repeat: no-repeat;
+}
+.img_sec {
+    width: 100%;
+    height: auto;
+}
+.discount_sec1 .detailsec2{
+    padding: 8rem 0rem 5rem 0rem;
+}
+.detailsec2 h1 {
+    font-size: 3.1rem;
+    font-family:'Roboto', sans-serif;
+    color: #3d5f00;
+    font-weight: 600;
+    line-height: 5rem;
+}
+
+.detailsec2 h2 {
+    font-size: 1.9rem;
+    font-family:'Roboto', sans-serif;
+    color: #3d5f00;
+    font-weight: 500;
+    line-height: 1rem;
+    padding-bottom: 1.5rem;
+    letter-spacing: 0.6rem;
+}
+.detailsec2 h4 {
+    font-size: 2rem;
+    font-family:'Roboto', sans-serif;
+    color: #3d5f00;
+    font-weight: 500;
+    line-height: 0rem;
+    /* padding-bottom: 1.5rem; */
+}
+.detailsec2 p {
+    font-size: 1.5rem;
+    font-family:'Roboto', sans-serif;
+    color: #3d5f00;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    line-height: 1.9rem;
+}
+.discount_sec1 .buttonsec button {
+    margin-right: 0;
+}
+
+/****************************************************************************/ 
+         /* Pricing Section Styling */ 
+/****************************************************************************/ 
+
+.price_sec .heading_sec{
+    position: absolute;
+    font-size: 2.8rem;
+    font-weight:800;
+    color: #3d5f00;
+    font-family: 'Roboto', sans-serif;
+    top: 9.7rem;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    text-transform: capitalize;
+}
+
+.price_sec .row {
+    margin-top: 10rem;
+}
+
+/* card section 1 */
+.card_sec{
+    width:100%;
+    /* margin:0 auto; */
+    text-align: center;
+    color: #3d5f00;
+}
+.card_sec .card{
+    width:100%;
+    margin:0 auto;
+}
+
+.card_sec h1 {
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #ffff;
+    padding-top: 4rem;
+ }
+.card_sec h2 {
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 4rem;
+}
+.card_sec p{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.bg_image {
+    /* background-image: url('images/Pricing.png'); */
+    width: 100%;
+    height: auto;
+}
+.card_sec .card-body{
+    padding: 3rem 0 3rem 0;
+    background-color: #f1f1f1;
+}
+
+.card_sec .buttonsec a {
+    background-color: #3d5f00;
+    color: #fff;
+    font-family:'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border: 2.5px solid #3d5f00;
+    border-radius: 1.5rem 0rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 5rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/****************************************************************************/
+                    /* Special Discount Section-2 Styling */ 
+/****************************************************************************/
+.discount_sec2 .detailsec2 {
+    padding: 5rem 0rem 8rem 0rem;
+    text-align: right;
+}
+.discount_sec2 {
+    width: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+}
+.discount_sec2 .buttonsec button {
+    margin-right: 0;
+}
+/****************************************************************************/ 
+         /* Blog Section Styling */ 
+/****************************************************************************/ 
+
+.blog_sec .row{
+    margin-top: 10rem;
+}
+
+.blog_sec .heading_sec{
+    position: absolute;
+    font-size: 2.8rem;
+    font-weight:800;
+    color: #3d5f00;
+    font-family: 'Roboto', sans-serif;
+    top: 9.7rem;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    text-transform: capitalize;
+}
+
+/* card section 1 */
+.card_sec1{
+    width:100%;
+    margin:0 auto;
+    color: #3d5f00;
+}
+.card_sec1 .card{
+    width:100%;
+    height:100%;
+    border: none;
+}
+.card_sec1 .card-body{
+    /* width:100%; */
+    /* margin:0 auto; */
+    background-color: #f1f1f1;
+}
+.card_sec1 h1 {
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    color: #3d5f00;
+    margin: 1rem 0 1rem 0;
+    text-align: left;
+ }
+.card_sec1 p{
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    font-weight: 400;
+    /* margin-top: 0rem; */
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.card_sec1 .buttonsec a {
+    background-color: #3d5f00;
+    color: #fff;
+    font-family:'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border: 2.5px solid #3d5f00;
+    border-radius: 1.5rem 0rem;
+    padding: 0.7rem 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 5rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/****************************************************************************/ 
+         /* Footer Section Styling */ 
+/****************************************************************************/ 
+
+.footer_sec{
+    width: 100%;
+    height:auto;
+    padding: 5rem 0 5rem 0;
+    background: #3d5f00;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.logo_img img{
+    height: 5rem;
+}
+.footer_heading{
+    margin: 2rem 0 2rem 0;
+}
+.footer_heading h1{
+    font-size: 4rem;
+    font-weight: 400;
+}
+.footer_heading h2{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.social_sec{
+    font-size: 3rem;
+    /* padding: 0 0 0; */
+}
+.web_site{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+/****************************************************************************/ 
+         /* Responsiv Code */ 
+/****************************************************************************/ 
+ /* 1em = 16px */
+
+@media only screen and (max-width:75em){  /* 1199px/16px = 75em  , 1199px or 75em */
+	html{
+	 font-size: 65%;
+	} 
+    .header .order_list span {
+        top: -8px;
+    }
+    .header .navbar_two .navbar_list {
+        gap: 6.5rem;
+    }
+
+    .paragraph_sec {
+        top: 20rem;
+    }
+    .container .heading_sec {
+        top: 12.5rem;
+    }
+}
+@media only screen and (max-width:62em){  
+    /* 991px or 62em */  
+        /* 991/16px = 61.87em or 62em */
+        
+        html{
+            font-size: 60%;
+           } 
+
+    /* ***************** Responsive Navbar**************** */
+
+        .mobile_navbar_btn{
+            display: flex;
+            justify-content: right;
+            /* display: block; */
+            /* z-index: 999; */
+            /* border: 3px solid #3d5f00; */
+            color: #3d5f00;
+            justify-items: right;
+        }
+        .header{
+            position: relative;
+        }
+        .navbar_two {
+            /* display: none; */
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: #a0bb71;
+            top: 0;
+            left: 0;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            /* To get the transition */
+            transform: translateX(100%);
+            transition: all 0.5s linear;
+
+            /* For manage overflow */
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        
+        .active .navbar_two {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .active .mobile_navbar_btn
+        .nav_icon[name="close-outline"]{
+            display: block;
+        }
+
+        .active .mobile_navbar_btn
+        .nav_icon[name="menu-outline"]{
+            display: none;
+        }
+
+        .navbar_list{
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        /* .paragraph_sec { */
+            /* top: 29rem; */
+            /* left: 0; */
+        /* } */
+        
+        .container .row_sec1 {
+            height:100vh;
+            width:100vw;
+        }
+        .img_sec1 .img {
+            width: 40%;
+        }
+}
+
+@media only screen and (max-width:48em){        /* 767px or 48em used for iPad */ 
+    html{
+        font-size: 55%;
+    }
+    .navbar_two {
+        height: 50vh;
+    }
+    .container .heading_sec {
+        top: 13.5rem;
+    }
+    .paragraph_sec {
+        top: 21rem;
+    }
+    .img {
+        width: 40%;
+    }
+    .border_shape {
+        width: 110px;
+        height: 110px;
+    }
+    /* .row_sec1 .card_sec{ */
+        /* font-size: 24%; */
+    /* } */
+    .main_img {
+        max-width: 60%;
+        height: auto;
+        margin: 3.5rem 0 0 3rem;
+    }
+    .img_sec1 {
+        text-align: center;
+        max-width: 50%;
+        height: auto;
+    }
+    .card_sec1 .card {
+        padding: 1rem;
+    }
+    .card_sec .card {
+        padding: 1rem;
+    }
+    .buttonsec button {
+        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width:45em){ 
+    .navbar_two {
+        height: 132vh;
+    }
+}
+
+@media only screen and (max-width: 30em){       /* 480px or 30em */
+	html{
+		font-size:50%;
+	}
+    .logo_img img {
+        height: 4rem;
+    }
+    .header .navbar_one {
+        padding: 0 2rem;
+    }
+    .navbar_two {
+        height: 70vh;
+    }
+    .buttonsec{
+        padding: 1rem 1rem;
+    }
+    .container .heading_sec {
+        top: 15rem;
+    }
+    .paragraph_sec {
+        top: 23rem;
+    }
+    /* .row{ */
+        /* margin: 1rem; */
+    /* } */
+    .buttonsec button {
+        font-size: 1rem;
+        border-radius: 1.5rem 0rem;
+        padding: 0.5rem 1.5rem;
+    }
+    /* .card_sec .buttonsec a { */
+        /* font-size: 1.2rem; */
+        /* padding: 1rem 1.5rem; */
+    /* } */
+} 
